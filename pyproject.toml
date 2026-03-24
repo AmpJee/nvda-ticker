@@ -1,0 +1,8 @@
+[project]
+name = "s05"
+version = "0.1.0"
+requires-python = ">=3.13"
+dependencies = [
+    "pytz>=2026.1.post1",
+    "yfinance>=1.2.0",
+]

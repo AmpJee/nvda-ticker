@@ -1,0 +1,17 @@
+[Unit]
+Description=NVDA Stock Price Monitor
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+WorkingDirectory=/opt/nvda_ticker
+ExecStart=/opt/nvda_ticker/venv/bin/python3 /opt/nvda_ticker/nvda_ticker.py
+Restart=always
+RestartSec=5
+StandardOutput=journal
+StandardError=journal
+SyslogIdentifier=nvda-ticker
+
+[Install]
+WantedBy=multi-user.target
